@@ -20,7 +20,7 @@ var contextmenu = new ContextMenu({
   function addFirstPoint (obj) {
       let coordinate = obj.coordinate;
       let startPoint = document.getElementById("place-start");
-    fetch(`http://nominatim.openstreetmap.org/reverse.php?lat=${coordinate[1]}&lon=${coordinate[0]}&zoom=18&format=jsonv2`)
+    fetch(`https://nominatim.openstreetmap.org/reverse.php?lat=${coordinate[1]}&lon=${coordinate[0]}&zoom=18&format=jsonv2`)
     .then((response)=>{
        return response.json();        
     }).then((data)=>{
@@ -45,7 +45,7 @@ var contextmenu = new ContextMenu({
   function addTravelingPoint (obj) {
     let coordinate = obj.coordinate;
     let startPoint = document.getElementById("place-start");
-        fetch(`http://nominatim.openstreetmap.org/reverse.php?lat=${coordinate[1]}&lon=${coordinate[0]}&zoom=18&format=jsonv2`)
+        fetch(`https://nominatim.openstreetmap.org/reverse.php?lat=${coordinate[1]}&lon=${coordinate[0]}&zoom=18&format=jsonv2`)
         .then((response)=>{
             return response.json();        
         }).then((data)=>{
