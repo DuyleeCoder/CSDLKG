@@ -1,4 +1,4 @@
-import dijkstra from "../node_modules/dijkstrajs/dijkstra.js";
+import dijkstra from "../dijkstra_lib/dijkstrajs/dijkstra.js";
 import {
   tinhGoc,
   getDirection
