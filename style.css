@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+:root {
+    --myShadow : 0px 0px 7px -2px rgba(0,0,0,0.95);
+}
+html {
+    overflow: hidden;
+}
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    color: #ccc;
+}
+button {
+    border:none;
+    outline: none;
+    cursor: pointer;
+}
+
+#map{
+    height: 100%;
+    width: 100%;    
+}
+
+#view-port {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;    
+}
+
+#mouse-position {
+        position: absolute;
+        z-index: 10;
+        bottom: 30px;
+        right: 0;
+}
+
+#search-container {
+    width: 400px;
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    top: 30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+}
+
+#search {
+   width: 400px;
+   display: flex;
+   flex-direction: row;
+
+}
+.search-icon{
+    position: absolute;
+    margin: 12px;
+}
+#search-input {
+    width: 100%;
+    padding: 0 40px;
+    outline: none;
+    border: none;
+    height: 40px;
+}
+
+.left-control {
+    /* width: 400px; */
+    max-height: 70%;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    overflow-y: auto;
+}
+
+.list-places {  
+   
+    display: flex;
+    flex-direction: column;
+}
+.place {
+    background-color: #fff;
+    height: 40px;
+    padding-right: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.place-input {
+    width: 90%;
+    height: 90%;
+    outline: none;
+    border:none;
+    padding: 0 10px;
+}
+.place-start {
+    border-left: 7px green solid;
+
+}
+.place-middle {
+    border-left: 7px red solid;
+
+}
+.btn-addPlace {
+    /* width: 30px; */
+    /* height: 30px; */
+    line-height: 30px;
+    background-color: dodgerblue;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.right-control{
+    background-color: #fff;
+    width: 300px;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.right-control__logo {
+    height: 100px;
+    line-height: 100px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+.right-control__total-road {
+    height: 100px;
+}
+.right-control__turn {
+    flex: 1;
+}
+
+#loading {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    /* display: none; */
+    border-radius: 10px;
+}
+.loading-background{
+    background-color: #ccc;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+}
+.loading-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 300px;
+    width: 500px;
+    background-color: #fff;
+    padding: 20px;
+}
+/* .loading-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 18px;
+} */
+
+/* @keyframes loading {
+    from {
+        transform:translateX(-50%) translateY(-50%) rotate(0);
+    }
+    to {
+        transform:translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+} */
+
+#data {
+    display: flex;
+    flex-direction: column;
+}
+
+.road-agenda {
+    display: block;
+    width: 100%;
+    padding: 2px 20px;
+}
+.road-agenda:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
